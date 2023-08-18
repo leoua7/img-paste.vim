@@ -161,11 +161,11 @@ endfunction
 function! s:RandomName()
     " help feature-list
     if has('win16') || has('win32') || has('win64') || has('win95')
-        let l:new_random = strftime("%Y-%m-%d-%H-%M-%S")
-        " creates a file like this: `2019-11-12-10-27-10.png`
+        let l:new_random = strftime("%Y-%m-%d_%H-%M-%S")
+        " creates a file like this: `2019-11-12_10-27-10.png`
         " the filesystem on Windows does not allow : character.
     else
-        let l:new_random = strftime("%Y-%m-%d-%H-%M-%S")
+        let l:new_random = strftime("%Y-%m-%d_%H-%M-%S")
     endif
     return l:new_random
 endfunction
@@ -250,5 +250,5 @@ if !exists('g:mdip_tmpname')
     let g:mdip_tmpname = 'tmp'
 endif
 if !exists('g:mdip_imgname')
-    let g:mdip_imgname = 'image'
+    let g:mdip_imgname = 'photo'
 endif
