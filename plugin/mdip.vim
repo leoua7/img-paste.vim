@@ -236,7 +236,7 @@ function! mdip#MarkdownClipboardImage()
 endfunction
 
 if !exists('g:mdip_imgdir') && !exists('g:mdip_imgdir_absolute')
-    let g:mdip_imgdir = 'img'
+    let g:mdip_imgdir = 'images'
 endif
 "allow absolute paths. E.g., on linux: /home/path/to/imgdir/
 if exists('g:mdip_imgdir_absolute')
